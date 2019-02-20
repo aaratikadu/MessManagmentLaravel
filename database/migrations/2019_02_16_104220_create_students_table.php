@@ -25,6 +25,7 @@ class CreateStudentsTable extends Migration
             $table->string('room_no');
             $table->string('local_address');
             $table->string('par_address');
+            $table->string('image_id');
             $table->timestamps();
         });
     }

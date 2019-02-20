@@ -24,18 +24,40 @@
                     <div class="col s4 m4">
                         <div class="card">
                             <div class="card-image">
-                                 <img class="activator" width="100px" height="100px" src="{{asset('images/user.png')}}">
+                                 <img class="activator" width="100px" height="200px" 
+                                 @if ($img_url = Session::get('image_url'))
+                                     src="{{$img_url}}"
+                                 @else
+                                     src="{{asset('images/user.png')}}"
+                                 @endif
+                                 >
                             </div>
-                            <div class="card-action">
-                                <input type="file" name="image" value="">
-                                <button type="submit" name="button">Upload</button>
+                            <div class="card-action input-filed">
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                        <span>File</span>
+                                        <input type="file" name="image">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn waves-effect" name="button">Upload</button>
                             </div>
                         </div>
                     </div>
                  </div>
             </form>
+
         <form class="register" action="{{Route('registrationPost')}}" method="POST">
             {{ csrf_field()}}
+
+            @if ($img_id = Session::get('image_id'))
+                <input type="hidden" name="image_id" value="{{$img_id}}">
+            @else
+                <input type="hidden" name="image_id" value="0">
+            @endif
+            
             <div class="row">
               <div class="input-field col  m6 s12">
                   <i class="material-icons prefix">account_circle</i>
