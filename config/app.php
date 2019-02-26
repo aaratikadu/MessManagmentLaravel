@@ -177,6 +177,21 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        
+
+
+      
+    LaravelQRCode\Providers\QRCodeServiceProvider::class,     
+  
+],
+
+
+'aliases' => [
+   
+   'QRCode' => LaravelQRCode\Facades\QRCode::class,     
+      
+
+
     ],
 
     /*
