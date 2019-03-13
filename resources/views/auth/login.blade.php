@@ -19,7 +19,7 @@
         <div class="col m4 offset-m4 s12">
             <div class="card">
                 <div class="card-content">
-                    <form action="#" method="post">
+                    <form action="{{Route('login')}}" method="post">
                         {{ csrf_field() }}
                         <div class="row">
                             <div class="input-field s12 m12">
@@ -41,6 +41,7 @@
                         <div class="row">
                             <div class="col m12 s12">
                                 <button type="submit" class="btn green waves-effect">Login</button>
+                                <a href="{{Route('registrationView')}}" class="btn purple waves-effect" > Register</a>
                             </div>
                         </div>
                     </form>

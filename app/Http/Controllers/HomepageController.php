@@ -17,5 +17,9 @@ class HomepageController extends Controller
         return view('student.home',['data' => $student]);
     }
 
+    public function index(){
+        return view('auth.login');
+    }
+
     
 }

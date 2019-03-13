@@ -17,7 +17,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/','Admin\HomepageController@home')->name('adminHome');
     Route::get('/qrscan','Admin\HomepageController@qrscan')->name('adminQrScan');
 
-    Route::post('/student/attendance', 'Admin\AttendanceController@create');
+    Route::post('/student/attendance', 'Admin\AttendanceController@create')->name('adminAttendace');
 
     Route::get('/request/approve/{id}','Admin\RequestController@approve');
     Route::get('/request/delete/{id}','Admin\RequestController@delete');
@@ -26,9 +26,8 @@ Route::group(['prefix' => 'admin'], function () {
 Route::group(['prefix' => 'ajax'], function () {
     Route::post('/getStudent/email','AjaxController@getStudentByEmail');
 });
-Route::get('/', function () {
-    return view('student.menupage');
-});
+
+Route::get('/', 'HomepageController@index');
 
 Route::get('/feedback','FeedbackController@index')->name('feedbackView');
 Route::post('/feedback','FeedbackController@create')->name('feedbackPost');
