@@ -2,43 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="{{asset('css/materialize.min.css')}}"  media="screen,projection"/>
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title> @yield('title') </title>
     @yield('stylesheets')
 </head>
 <body>
-  <div class="navbar-fixed">
-        <nav>
-        <div class="nav-wrapper pink darken-1 ">
-            <a href="#!" class="brand-logo"><i class= "large material-icons">local_dining</i> MMS</a>
-            <ul class="right hide-on-med-and-down">
-            <li><a href="#">Verify Rgistration</a></li>
-            <li><a href="#">Student Details</a></li>
-            <li><a href="#">Set Todays Menu</a></li>
-            <li><a href="#">Manage Plates</a></li>
-            <li><a href="#">Remainning Students</a></li>
-            <li><a href="#">Check Fees Details</a></li>
-            <li><a href="#">Recharge Verification</a></li>
-            <li><a href="#">Log out</a></li>
 
-            </ul>
-        </div>
-        </nav>
-    </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <a class="navbar-brand" href="#">E-Mess</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" href="{{Route('adminHome')}}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{Route('adminQrScan')}}">Scan QR</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{Route('adminStudentRequest')}}">Student Request</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
     
-    <div class="container">
+
     
     @yield('body')
 
-    <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @include('flash')
     @yield('scripts')
 </body>
 </html>

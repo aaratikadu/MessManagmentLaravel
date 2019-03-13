@@ -10,17 +10,24 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('qr-code', function () 
-{
-  return QRCode::text('QR Code Generator for Laravel!')->png();    
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/requests','Admin\HomepageController@requests')->name('adminStudentRequest');
+    Route::get('/','Admin\HomepageController@home')->name('adminHome');
+    Route::get('/qrscan','Admin\HomepageController@qrscan')->name('adminQrScan');
+
+    Route::post('/student/attendance', 'Admin\AttendanceController@create');
+
+    Route::get('/request/approve/{id}','Admin\RequestController@approve');
+    Route::get('/request/delete/{id}','Admin\RequestController@delete');
 });
 
+Route::group(['prefix' => 'ajax'], function () {
+    Route::post('/getStudent/email','AjaxController@getStudentByEmail');
+});
 Route::get('/', function () {
     return view('student.menupage');
-});
-
-Route::get('/admin', function () {
-    return view('admin.home');
 });
 
 Route::get('/feedback','FeedbackController@index')->name('feedbackView');
@@ -34,3 +41,10 @@ Route::post('/menupage','TodaySpecialController@create')->name('menupagePost');
 
 Route::post('/registration/upload','RegistrationController@upload')->name('uploadimage');
 
+Route::get('/test', function () {
+    return view('admin.home');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomepageController@homepage')->name('home');

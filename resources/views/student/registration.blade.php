@@ -74,16 +74,30 @@
           <div class="row">           
               <div class="input-field col m6 s12">
                 <i class="material-icons prefix">email</i>
-                <input id="email" type="text"  data-length="10" class="validate" name="email">
+                <input id="email" type="text"   class="validate" name="email">
                 <label for="email">E-mail</label>
               </div>
 
                         
                   <div class="input-field col m6 s12">
-                      <input id="clgname" type="text"  data-length="10"  class="validate" name="college">
+                      <input id="clgname" type="text"   class="validate" name="college">
                       <label for="clgname">College Name</label>
                   </div>
           </div>
+
+          <div class="row">           
+              <div class="input-field col m6 s12">
+                <input id="prn" type="number"   class="validate" name="prn">
+                <label for="prn">PRN</label>
+              </div>
+
+                        
+                  <div class="input-field col m6 s12">
+                      <input id="password" type="password"  class="validate" name="password">
+                      <label for="password">Password</label>
+                  </div>
+          </div>
+
           <div class="row">           
               <div class="input-field col m6 s12">
                   <select name="branch">

@@ -36,19 +36,21 @@ class RegistrationController extends Controller
     
     public function create(Request $req){
        // return $req->all();
-        $feed=new Student();
-        $feed->name=$req->name;
-        $feed->mobile=$req->mobile;
-        $feed->email=$req->email;
-        $feed->college_name=$req->college;
-        $feed->branch=$req->branch;
-        $feed->year=$req->year;
-        $feed->dob=$req->dob;
-        $feed->room_no=$req->roomno;
-        $feed->local_address=$req->taddress;
-        $feed->par_address=$req->paddress;
-        $feed->image_id = $req->image_id;
-                if ($feed->save()) {
+        $student=new Student();
+        $student->name = $req->name;
+        $student->mobile = $req->mobile;
+        $student->prn = $req->prn;
+        $student->passwd = $req->password;
+        $student->email = $req->email;
+        $student->college_name = $req->college;
+        $student->branch = $req->branch;
+        $student->year = $req->year;
+        $student->dob = $req->dob;
+        $student->room_no = $req->roomno;
+        $student->local_address = $req->taddress;
+        $student->par_address = $req->paddress;
+        $student->image_id = $req->image_id;
+                if ($student->save()) {
                     return back()->with('success','Registration Successfully');
         }
         return back()->with('error','Something went Wrong');

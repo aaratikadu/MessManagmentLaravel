@@ -26,6 +26,9 @@ class CreateStudentsTable extends Migration
             $table->string('local_address');
             $table->string('par_address');
             $table->string('image_id');
+            $table->string('prn');
+            $table->string('passwd');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

@@ -6,14 +6,11 @@
 @endsection
 
 @section('body')
-    <div class="row">
-        <div class="col m12">
-            <div class="row">
-
+<div class="row">
     <div class="col s12 m12">
         <div class="card purple lighten-5">
             <div class="card-content">
-                <span class="card-title"><h2 >Today's Special Menu</h2></span>
+                <span class="card-title"><h3 >Today's Special Menu</h3></span>
                 <div class="row">
                     <div class="col s12 m12">
                         <div class="carousel">
@@ -30,120 +27,7 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col m4 offset-m4 s12">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                   <img class="activator" src="{{asset('images/qrcode.png')}}">
-            </div>
-        
-            <div class="card-content">
-
-            </div>
-            <div class="card-action">
-
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div class="row">
-    <div class="col m4  s12">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                   <img class="activator" src="{{asset('images/qrcode.png')}}">
-            </div>
-        
-            <div class="card-content">
-
-            </div>
-            <div class="card-action">
-
-            </div>
-        </div>
-
-    </div>
-    <div class="col m4  s12">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                   <img class="activator" src="{{asset('images/qrcode.png')}}">
-            </div>
-        
-            <div class="card-content">
-
-            </div>
-            <div class="card-action">
-
-            </div>
-        </div>
-
-    </div>
-    <div class="col m4  s12">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                   <img class="activator" src="{{asset('images/qrcode.png')}}">
-            </div>
-        
-            <div class="card-content">
-
-            </div>
-            <div class="card-action">
-
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div class="row">
-    <div class="col m4  s12">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                   <img class="activator" src="{{asset('images/qrcode.png')}}">
-            </div>
-        
-            <div class="card-content">
-
-            </div>
-            <div class="card-action">
-
-            </div>
-        </div>
-
-    </div>
-    <div class="col m4  s12">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                   <img class="activator" src="{{asset('images/qrcode.png')}}">
-            </div>
-        
-            <div class="card-content">
-
-            </div>
-            <div class="card-action">
-
-            </div>
-        </div>
-
-    </div>
-    <div class="col m4  s12">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                   <img class="activator"src="{{asset('images/qrcode.png')}}">
-            </div>
-        
-            <div class="card-content">
-
-            </div>
-            <div class="card-action">
-
-            </div>
-        </div>
-
-    </div>
-</div>
-
+      
 
 <div class="row">
     <div class="col m12 s12 card">
